@@ -26,5 +26,10 @@ function highlight(){
 }
 
 function check(){
-    console.log(instructions);
+    instructions.forEach((e,i) => {
+        setTimeout(() => {
+            e.classList = ("checked");
+        }, 0 + (1000 * i));
+        console.log(e);
+    });
 }
