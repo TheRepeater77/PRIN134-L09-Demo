@@ -25,11 +25,18 @@ function highlight(){
     });
 }
 
+let check_bool = true;
 function check(){
+    check_bool = true;
     instructions.forEach((e,i) => {
-        setTimeout(() => {
+        if(check_bool == true){
             e.classList = ("checked");
-        }, 0 + (1000 * i));
-        console.log(e);
+        }
     });
+}
+
+function reset(){
+        instructions.forEach((e,i) => {
+            e.classList = 0;
+        });
 }
